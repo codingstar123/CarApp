@@ -1,0 +1,23 @@
+{
+  "name": "carapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingstar123/CarApp.git"
+  },
+  "author": "Codingstar & Acapace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingstar123/CarApp/issues"
+  },
+  "homepage": "https://github.com/codingstar123/CarApp#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
