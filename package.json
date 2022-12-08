@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/codingstar123/CarApp#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^6.8.0"
   }
