@@ -12,22 +12,22 @@ app.use(cors());
 
 ////////////////////////////////////////////////////////////////
 
-//========Route=======
+//========ROUTES=======//
 
 app.get('/', (req,res)=>{
   res.send('Hello World')
 })
 
 
-/////CREATE/POST ROUTE/////Add Car 
+//========CREATE/POST ROUTE=======ADD CAR
 app.post('/cars', (req, res) => {
   Cars.create(req.body, (err, createdCar) =>{
       res.json(createdCar);
   });
 });
 
-///////INDEX ROUTE/GET ROUTE/READ////Get Car
 
+//========GET/READ ROUTE=======GET CAR
 app.get('/cars', (req, res) => {
   Cars.find({}, (err, foundCar) => {
       res.json(foundCar);
@@ -35,8 +35,7 @@ app.get('/cars', (req, res) => {
 });
 
 
-///////DELETE ROUTE///Delete Cars
-
+//========DELETE ROUTE=======DELETE CAR
 app.delete('/cars/:id', (req, res)=>{
   Cars.findByIdAndRemove(req.params.id, (err, deletedCars)=>{
       res.json(deletedCars);
@@ -44,14 +43,12 @@ app.delete('/cars/:id', (req, res)=>{
 });
 
 
-///////UPDATE/EDIT ROUTE///Edit Cars
-
+//========UPDATE/EDIT ROUTE=======EDIT CAR
 app.put('/cars/:id', (req, res)=>{
   Cars.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedCar)=>{
       res.json(updatedCar);
   });
 });
-
 
 
 //========Listening=======
