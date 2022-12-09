@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import '../App.css';
 
 const Car = (props)=>{
 
@@ -13,13 +14,18 @@ const Car = (props)=>{
         {
         (props.car.availableToPurchase)?
         <>
-          <div><img src={props.car.image} height="250"/></div>
-          <div>{props.car.year}</div>,
-          <div>{props.car.make}</div>,
-          <div>{props.car.model}</div>,
-          <div>{props.car.price}</div>,
-          <button onClick={(event)=>{props.handleNewDelete(props.car)}}>Delete</button>
-          <button onClick={handleShowEdit}>Edit</button>
+          <div className="card display" style={{width:"20rem", backgroundColor:"lightgrey"}}>
+            <img src={props.car.image} className="card-img-top" alt="toyota supra"/>
+
+            <div className="card-body">
+              <h5 className="card-title">{props.car.make},{props.car.model}</h5>
+              <p className="card-text">{props.car.year}</p>
+              <p className="card-text">{props.car.price}</p>
+              <button onClick={(event)=>{props.handleNewDelete(props.car)}}
+              type="button" className="btn btn-danger" >Delete</button>
+              <button type="button" className="btn btn-primary" onClick={handleShowEdit}>Edit</button>
+            </div>
+          </div>
 
   {/* This is the Edit Section */}
           {

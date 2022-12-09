@@ -153,8 +153,8 @@ function App() {
       </form>
     </div>
     {/* This is the Show section */}
-    <div>
-      <h2>Cars</h2>
+    <h2>Car</h2>
+    <div style={{display:"flex",flexWrap:"wrap" }}>
       {
         cars.map((car)=>{
           return <>
